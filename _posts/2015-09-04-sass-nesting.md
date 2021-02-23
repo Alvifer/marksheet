@@ -1,13 +1,13 @@
 ---
-layout: post
-title: "Sass <strong>nesting</strong>"
-subtitle: "Reusing the same parent selector"
-section: sass
+Capa: post
+Título: "<strong>anidado</strong> en Sass"
+Subtítulo: "Reutilizando el mismo selector principal"
+sección: sass
 ---
 
-### Syntax
+### Sintaxis
 
-In Sass, **nesting CSS rules** allows to define **hierarchy selectors**:
+En Sass, **anidar reglas CSS** permite definir **selectores de jerarquía**:
 
 {% highlight scss %}
 .title{
@@ -24,11 +24,11 @@ This will be compiled into:
 .title em{}
 {% endhighlight %}
 
-Because `strong` and `em` appear _within_ the `.title` rule (between the 2 curly braces `{` `}`), both will be **prepended** with the parent selector `.title`.
+Debido a que `strong` y `em` aparecen _dentro_ de la regla `.title` (entre las 2 llaves` {``} `), ambos se **antepondrán** con el selector principal` .title`.
 
-### Nesting purpose
+### Propósito de anidación
 
-Because [CSS priority](/css-priority.html) can be tricky, it's common to use be **specific** when writing selectors, by combining multiple classes/tags to prevent CSS rules to cancel each other out.
+Debido a que [CSS priority](/css-priority.html) puede ser complicado, es común usar ser **específico** al escribir selectores, combinando múltiples clases/etiquetas para evitar que las reglas CSS se cancelen entre sí.
 
 {% highlight css %}
 .description{}
@@ -46,7 +46,7 @@ Because [CSS priority](/css-priority.html) can be tricky, it's common to use be 
 .description table th{}
 {% endhighlight %}
 
-To prevent rewriting `.description`, let's use the ampersand `&`:
+Para evitar la reescritura de `.description`, usemos el signo comercial `&`:
 
 {% highlight scss %}
 .description{
@@ -65,7 +65,7 @@ To prevent rewriting `.description`, let's use the ampersand `&`:
 }
 {% endhighlight %}
 
-You can go even further by replacing `& p` and `& table` with `&` to create **nested** selectors:
+Puede ir aún más lejos reemplazando `& p` y `& table` por `&` para crear selectores **anidados**:
 
 {% highlight scss %}
 .description{
